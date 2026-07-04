@@ -5,7 +5,7 @@ body {
 .app {
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #fff7d6 0%, #ffe082 50%, #ffb347 100%);
+  background: rgba(75, 212, 250, 0.95);
 }
 
 .page {
@@ -15,7 +15,7 @@ body {
 
 .page-header {
   background: rgba(255, 255, 255, 0.95);
-  border: 2px solid #f4c542;
+  border: 2px solid #000000;
   border-radius: 24px;
   padding: 2rem 2.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
@@ -33,6 +33,7 @@ body {
 }
 
 h1 {
+  font-family: 'Pixelify Sans', system-ui, sans-serif;
   margin: 0;
   font-size: 3rem;
   color: #2f3e77;
@@ -57,6 +58,57 @@ h1 {
   color: #b91c1c;
 }
 
+.filtro-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.filtro-busqueda {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.filtro-busqueda input {
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.filtro-tipos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tipo-boton {
+  border: 2px solid #4b5563;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  background: #f3f4f6;
+  color: #1f2937;
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.tipo-boton.activo {
+  background: #2f3e77;
+  color: white;
+}
+
 .pokemon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -64,7 +116,7 @@ h1 {
 }
 
 .pokemon-card {
-  background: #fffdf2;
+  background: #046D8A;
   border-radius: 16px;
   padding: 0.9rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
@@ -82,16 +134,16 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #dbeafe 0%, #fef3c7 100%);
-  border: 2px solid #9ca3af;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #000000;
   border-radius: 12px;
   margin-bottom: 0.75rem;
   padding: 0.35rem;
 }
 
 .pokemon-card__image img {
-  width: 84px;
-  height: 84px;
+  width: 168px;
+  height: 168px;
   object-fit: contain;
   image-rendering: pixelated;
 }
@@ -101,15 +153,35 @@ h1 {
   color: #6b7280;
 }
 
+.pokemon-card__body {
+  width: 100%;
+}
+
+.pokemon-card__id-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.pokemon-card__id-sprite {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 .pokemon-card__id {
   margin: 0;
-  color: #ef4444;
+  color: #FFFFFF;
   font-weight: 700;
 }
 
 .pokemon-card h2 {
+  font-family: 'Pixelify Sans', system-ui, sans-serif;
   margin: 0.25rem 0 0.75rem;
-  color: #1f2937;
+  color: #FFFFFF;
   text-transform: capitalize;
   font-size: 1.25rem;
 }
@@ -133,7 +205,7 @@ h1 {
 .type-badge.normal { background: #a8a878; }
 .type-badge.fire { background: #f08030; }
 .type-badge.water { background: #6890f0; }
-.type-badge.grass { background: #78c850; }
+.type-badge.grass { background: #56A32F; }
 .type-badge.electric { background: #f8d030; color: #1f2937; }
 .type-badge.ice { background: #98d8d8; color: #1f2937; }
 .type-badge.fighting { background: #c03028; }
