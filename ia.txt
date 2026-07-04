@@ -1,0 +1,14 @@
+=== Etapa 1 ===
+Prompt: 
+
+"Contexto: Se planea realizar un sistema web. Se dividirá en etapas. En esta primera etapa sólo generarás
+ la estructura inicial del proyecto, el cual tratará sobre Pokémon, así que, respecto a esta temática, 
+ puedes empezar sólo agregando un título en la página, en las siguientes etapas vendrá lo siguiente."
+
+Resultado: Se actualizaron los archivos "App.jsx" y "App.cs", en donde la página empezó mostrando un título,
+ señalando la primera etapa, y una bienvenida, junto a un estilo simple, con un fondo amarillo.
+
+Utilidad: Útil, pero lo complejo viene en las siguientes etapas. El componente de las cartas de los Pokémon
+ lo he creado por mi cuenta para que no genere código repentinamente, y/o para que no se confunda en lo que
+  debía editar en esta etapa.
+
