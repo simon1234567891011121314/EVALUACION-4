@@ -173,6 +173,10 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .estadisticas {
+    grid-template-columns: 1fr;
+  }
 }
 
 .panel-favoritos {
@@ -189,6 +193,30 @@ h1 {
   font-size: 1.3rem;
   color: #2f3e77;
   font-family: 'Pixelify Sans', system-ui, sans-serif;
+}
+
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.estadistica-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  background: #f3f4f6;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.estadistica-label {
+  font-size: 0.75rem;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .panel-favoritos ul {
@@ -301,8 +329,10 @@ h1 {
 }
 
 .pokemon-card__placeholder {
-  font-size: 2rem;
-  color: #6b7280;
+  font-size: 1.1rem;
+  color: #b91c1c;
+  font-weight: 700;
+  text-align: center;
 }
 
 .pokemon-card__body {

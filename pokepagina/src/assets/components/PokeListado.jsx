@@ -61,11 +61,21 @@ function PokeListado({ filtroTipo, busqueda, favoritos, alternarFavorito, bloque
     return <p className="status error">{error}</p>
   }
 
+  const busquedaNormalizada = busqueda.trim().toLowerCase()
+  const hayFiltroActivo = filtroTipo !== '' || busquedaNormalizada !== ''
+
   const pokemonsFiltrados = pokemons.filter((pokemon) => {
     const coincideTipo = filtroTipo === '' || pokemon.type.includes(filtroTipo)
-    const coincideBusqueda = pokemon.name.toLowerCase().includes(busqueda)
+    const coincideBusqueda = pokemon.name.toLowerCase().includes(busquedaNormalizada)
+    const cumpleFiltro = coincideTipo && coincideBusqueda
 
-    return coincideTipo && coincideBusqueda
+    if (!hayFiltroActivo) {
+      return cumpleFiltro
+    }
+
+    const estaBloqueado = bloqueados.some((item) => item.id === pokemon.id)
+
+    return !estaBloqueado && cumpleFiltro
   })
 
   if (pokemonsFiltrados.length === 0) {

@@ -29,6 +29,8 @@ const guardarEnStorage = (clave, valor) => {
   window.localStorage.setItem(clave, JSON.stringify(valor))
 }
 
+const TOTAL_POKEMONES = 151
+
 function App() {
   const [filtroTipo, setFiltroTipo] = useState('')
   const [busqueda, setBusqueda] = useState('')
@@ -79,9 +81,15 @@ function App() {
         return actual.filter((item) => item.id !== pokemon.id)
       }
 
+      setFavoritos((favoritosActuales) => favoritosActuales.filter((item) => item.id !== pokemon.id))
+
       return [...actual, pokemon]
     })
   }
+
+  useEffect(() => {
+    setFavoritos((favoritosActuales) => favoritosActuales.filter((pokemon) => !bloqueados.some((bloqueado) => bloqueado.id === pokemon.id)))
+  }, [bloqueados])
 
   useEffect(() => {
     guardarEnStorage(STORAGE_KEYS.favoritos, favoritos)
@@ -121,6 +129,20 @@ function App() {
 
           <aside className="panel-favoritos">
             <h2>Favoritos</h2>
+            <div className="estadisticas">
+              <div className="estadistica-item">
+                <span className="estadistica-label">Favoritos</span>
+                <strong>{favoritos.length}</strong>
+              </div>
+              <div className="estadistica-item">
+                <span className="estadistica-label">Pokémon</span>
+                <strong>{TOTAL_POKEMONES}</strong>
+              </div>
+              <div className="estadistica-item">
+                <span className="estadistica-label">Bloqueados</span>
+                <strong>{bloqueados.length}</strong>
+              </div>
+            </div>
             {favoritos.length === 0 ? (
               <p className="favoritos-vacio">Aún no has marcado favoritos.</p>
             ) : (
