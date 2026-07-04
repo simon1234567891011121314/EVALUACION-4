@@ -72,3 +72,35 @@ Prompt:
 "Graaciaas, puedes hacer que la barrita de búsqueda no se vea negra, sino blanca? Plss"
 
 Copilot logró cambiar el color de la barra exitosamente, así que pasaré a la siguiente etapa.
+
+=== Etapa 4 ===
+
+Quise cambiar el aspecto de las cartas por uno más cuadrado, para que se asemeje a ciertas pokédex
+ de algunos juegos.
+
+Prompt: "Graciaas, puedes hacer que las cartas de los pokémon tengan unos bordes más cuadrados en 
+vez de tener unos bordes redondos? pls c:"
+
+Resultado: Las cartas ahora tienen un aspecto más cuadrado.
+
+Utilidad: Más que nada para diferenciarlas de un aspecto genérico que genera copilot a la hora de
+ mostrar componentes tipo "cartas". Ahora a continuar el contenido principal que se pide en la etapa
+  4:
+
+Prompt: "Graciass, pero de momento prefiero ir a la etapa 4, en donde se pide lo siguiente:
+
+Mediante un panel lateral en las cartitas, se debe tener un sistema de marcar Pokémon favorito, 
+así como también poder desmarcarlo"
+
+Resultado: Copilot generó un sistema de agregado y quitado de una marca para añadir a Pokémon 
+favoritos en la página (aunque no se guardan, de momento).
+
+Utilidad: Sirve y es funcional, pero el botón quitar es totalmente invisible en sus contenido 
+interior porque tiene el mismo color las letras y el botón. Por lo que le pedí que cambie el color.
+
+Prompt: 
+"Graciaaas! está bueno, pero puedes cambiarle el color de las letras al botón "Quitar" una vez
+ agregas como favorito a un Pokémon. La letra debe ser oscura porque el botón es blanco pls."
+
+Funcionó, por fortuna. Además de eso, le agregué el cambio de fuente a las nuevas palabras agregadas,
+ para que haya cohesión en la fuente principal que se está usando.

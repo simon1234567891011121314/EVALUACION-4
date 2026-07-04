@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import PokeCarta from './PokeCarta'
 
-function PokeListado({ filtroTipo, busqueda }) {
+function PokeListado({ filtroTipo, busqueda, favoritos, alternarFavorito }) {
   const [pokemons, setPokemons] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -82,6 +82,8 @@ function PokeListado({ filtroTipo, busqueda }) {
           id={pokemon.id}
           sprite={pokemon.sprite}
           smallSprite={pokemon.smallSprite}
+          favorito={favoritos.some((item) => item.id === pokemon.id)}
+          alternarFavorito={() => alternarFavorito(pokemon)}
         />
       ))}
     </section>

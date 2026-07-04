@@ -1,4 +1,4 @@
-function PokeCarta({ name, type, id, sprite, smallSprite }) {
+function PokeCarta({ name, type, id, sprite, smallSprite, favorito, alternarFavorito }) {
   const tipos = Array.isArray(type) ? type : [type]
   const nombre = name ? name.charAt(0).toUpperCase() + name.slice(1) : 'Pokémon'
   const pokeBallSprite = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'
@@ -18,6 +18,9 @@ function PokeCarta({ name, type, id, sprite, smallSprite }) {
           <img className="pokemon-card__id-sprite" src={pokeBallSprite} alt="" loading="lazy" />
           <p className="pokemon-card__id">#{String(id).padStart(3, '0')}</p>
         </div>
+        <button className={`favorito-boton ${favorito ? 'activo' : ''}`} type="button" onClick={alternarFavorito}>
+          {favorito ? '★ Favorito' : '☆ Favorito'}
+        </button>
         <h2>{nombre}</h2>
         <div className="pokemon-card__types">
           {tipos.map((tipo) => (
