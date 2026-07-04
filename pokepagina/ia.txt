@@ -121,6 +121,18 @@ e igual queda como favorito en el panel derecho, lo cual es un poco extraño, pe
 
 === Etapa 6 ===
 
+Prompt: Graciaas. Siguiendo con la etapa 6, esta se trata sobre la persistencia en
+ localStorage de los datos. Dirigiéndose la función a que las cartas bloqueadas 
+ y favoritas puedan permanecer al recargar la página.
+
+Resultado: Se editó el archivo "App.jsx", y ahora es que la data permanezca en cuanto
+ a bloquear, desbloquear, marcar y desmarcar favoritos a las cartas Pokémon.
+
+Utilidad: El nuevo código generado ha funcionado sin problemas, los datos permanecen 
+sin problemas. 
+
+=== Etapa 7 ===
+
 Prompt: 
 
 Resultado: 

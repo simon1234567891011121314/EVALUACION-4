@@ -1,13 +1,39 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 import PokeFiltrado from './assets/components/PokeFiltrado'
 import PokeListado from './assets/components/PokeListado'
 
+const STORAGE_KEYS = {
+  favoritos: 'pokepagina-favoritos',
+  bloqueados: 'pokepagina-bloqueados',
+}
+
+const leerDesdeStorage = (clave) => {
+  if (typeof window === 'undefined') {
+    return []
+  }
+
+  try {
+    const valor = window.localStorage.getItem(clave)
+    return valor ? JSON.parse(valor) : []
+  } catch {
+    return []
+  }
+}
+
+const guardarEnStorage = (clave, valor) => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  window.localStorage.setItem(clave, JSON.stringify(valor))
+}
+
 function App() {
   const [filtroTipo, setFiltroTipo] = useState('')
   const [busqueda, setBusqueda] = useState('')
-  const [favoritos, setFavoritos] = useState([])
-  const [bloqueados, setBloqueados] = useState([])
+  const [favoritos, setFavoritos] = useState(() => leerDesdeStorage(STORAGE_KEYS.favoritos))
+  const [bloqueados, setBloqueados] = useState(() => leerDesdeStorage(STORAGE_KEYS.bloqueados))
 
   const tiposDisponibles = useMemo(
     () => [
@@ -56,6 +82,14 @@ function App() {
       return [...actual, pokemon]
     })
   }
+
+  useEffect(() => {
+    guardarEnStorage(STORAGE_KEYS.favoritos, favoritos)
+  }, [favoritos])
+
+  useEffect(() => {
+    guardarEnStorage(STORAGE_KEYS.bloqueados, bloqueados)
+  }, [bloqueados])
 
   return (
     <main className="app">
