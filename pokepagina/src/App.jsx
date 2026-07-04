@@ -7,6 +7,7 @@ function App() {
   const [filtroTipo, setFiltroTipo] = useState('')
   const [busqueda, setBusqueda] = useState('')
   const [favoritos, setFavoritos] = useState([])
+  const [bloqueados, setBloqueados] = useState([])
 
   const tiposDisponibles = useMemo(
     () => [
@@ -44,6 +45,18 @@ function App() {
     })
   }
 
+  const alternarBloqueo = (pokemon) => {
+    setBloqueados((actual) => {
+      const yaBloqueado = actual.some((item) => item.id === pokemon.id)
+
+      if (yaBloqueado) {
+        return actual.filter((item) => item.id !== pokemon.id)
+      }
+
+      return [...actual, pokemon]
+    })
+  }
+
   return (
     <main className="app">
       <section className="page">
@@ -68,6 +81,8 @@ function App() {
             busqueda={busqueda}
             favoritos={favoritos}
             alternarFavorito={alternarFavorito}
+            bloqueados={bloqueados}
+            alternarBloqueo={alternarBloqueo}
           />
 
           <aside className="panel-favoritos">

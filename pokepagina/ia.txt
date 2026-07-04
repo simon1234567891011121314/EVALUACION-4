@@ -1,0 +1,128 @@
+=== Etapa 1 ===
+Prompt: 
+
+"Contexto: Se planea realizar un sistema web. Se dividirá en etapas. En esta primera etapa sólo generarás
+ la estructura inicial del proyecto, el cual tratará sobre Pokémon, así que, respecto a esta temática, 
+ puedes empezar sólo agregando un título en la página, en las siguientes etapas vendrá lo siguiente."
+
+Resultado: Se actualizaron los archivos "App.jsx" y "App.cs", en donde la página empezó mostrando un título,
+ señalando la primera etapa, y una bienvenida, junto a un estilo simple, con un fondo amarillo.
+
+Utilidad: Útil, pero lo complejo viene en las siguientes etapas. El componente de las cartas de los Pokémon
+ lo he creado por mi cuenta para que no genere código repentinamente, y/o para que no se confunda en lo que
+  debía editar en esta etapa. También he creado los demás componentes posterior a lo que Copilot generó.
+
+=== Etapa 2 ===
+
+Prompt: 
+Gracias. Aquí la siguiente etapa: 
+En el archivo "PokeCarta.jsx", necesitaremos las siguientes propiedades:
+El componente recibe una carga de datos mediante la API "PokéAPI", la cual debe presentar información muy básica sobre los primeros 151 Pokémon de la pokédex junto a su respectivo sprite. Con la API, el componente recibe por props el nombre, el tipo de Pokémon, su ID y su sprite.
+
+Por otra parte, el componente "PokeListado.jsx", se encargará de renderizar estas cartas de los 151 Pokémon, de esta forma quedarían enlistadas. C:
+
+Resultado: La página ahora presenta un listado de los Pokémon con sus respectivas imágenes, así como también sus tipos, los componentes se han actualizado, igualmente, por lo que estos han sido utilizados por Copilot.
+
+Utilidad: Yendo a este ritmo, la página podrá correr sin problemas, pues al encenderla esta carga los datos de la API sin problemas, incluso añadiendo un estado de "Cargando..." antes de que estos se muestren, en vez de quede la página en blanco. Por otra parte, me gustaba más la idea de representar a los Pokémon mediante sprites pixeleados en vez de sus imágenes estándar, por lo que opté por pedirle a Copilot lo siguiente:
+
+PROMPT: "gracias, se ve muy weno, pero podrían ser los sprites pixeleados (no los dibujos base, sino los sprites del juego) porfa? c: , si no es posible no pasa nada"
+
+Por lo que ahora actualizó la página con tal de que los Pokémon se vean de forma pixeleada (o sea con sus sprites), esto me agradó, pero Copilot ofreció la posibilidad de que esto se vea aún más retro, por lo que acepté. Este fue el tercer prompt de la segunda etapa:
+
+PROMPT: "graciass!! y sí, me gustaría que hicieras que los sprites se vean más retro, ajustando el tamaño, fondo o estilo de la tarjeta. Y también si es posible cambiar la fuente a una pixeleada igual, así por ejemplo como la del "Pixelify Sans" ;D"
+
+Lo que mostró fue un estilo más pixeleado en la página, con la fuente de Pixelify Sans, sumado al ajuste de los Pokémon, aunque ahora se ven bastante más pequeños de lo que esperaba, y no todas las palabras han cambiado su fuente. Pero de momento lo dejaré así.
+
+=== Etapa 3 ===
+
+Prompt:
+
+"Graciaas, ahora sigamos con la etapa 3: 
+
+Etapa 3: La página debe tener un sistema de filtrado y búsqueda.
+
+- Filtrado: En "PokeFiltrado.jsx", se desarrollarán botones de cada tipo que existe de Pokémon 
+(fuego, agua...) para poder filtrarlos. En App.jsx, se usará el hook useState para almacenar la 
+información del filtro que el usuario seleccione. También se puede filtrar mediante un campo de 
+texto en donde se ingrese el nombre del Pokémon. Si no hay coincidencias con los filtros, se debe 
+utilizar un renderizado condicional que señale que no se obtuvieron Pokémon (resultados). Este campo
+ de texto debe tener un límite de caracteres y que recorte espacios, con tal de que no se pueda 
+ vulnerar, añadiéndola así seguridad en el desarrollo.
+
+Resultado:  La IA ha generado un sistema de filtro competente, en donde el contenido a filtrar es 
+el tipo de Pokémon, por ejemplo: los de tipo fuego. También hay un campo de texto para buscar por
+ medio del nombre del Pokémon.
+
+Utilidad: Un agregado de utilidad para poder localizar el Pokémon que se desea de forma más
+ eficiente, aunque la barra de búsqueda tienen un color que no permite ver las letras claramente, 
+ pero de momento quedará así, además de que los botones de tipo de Pokémon se ven muy planos y poco
+  atrayentes, es por eso que intenté añadir el sprite de cada tipo. Copilot propuso decorar más los
+   botones, así que acepté:
+
+Prompt: "
+SE VE WENO, me interesó tu propuesta de hacer que los botones de tipo se vean más "de juego", veamos
+ qué tal!!!!!!"
+
+Resultado: Los botones cambiaron de color a un amarillo degradado de color sólido y saturado.
+
+Utilidad: No me gustó el cambio, debido a que el color chocaba mucho con el resto de colores, así
+ que lo revertí por cuenta propia. También decidí indicarle cambiar el color de la barra ahora:
+
+Prompt:
+"Graaciaas, puedes hacer que la barrita de búsqueda no se vea negra, sino blanca? Plss"
+
+Copilot logró cambiar el color de la barra exitosamente, así que pasaré a la siguiente etapa.
+
+=== Etapa 4 ===
+
+Quise cambiar el aspecto de las cartas por uno más cuadrado, para que se asemeje a ciertas pokédex
+ de algunos juegos.
+
+Prompt: "Graciaas, puedes hacer que las cartas de los pokémon tengan unos bordes más cuadrados en 
+vez de tener unos bordes redondos? pls c:"
+
+Resultado: Las cartas ahora tienen un aspecto más cuadrado.
+
+Utilidad: Más que nada para diferenciarlas de un aspecto genérico que genera copilot a la hora de
+ mostrar componentes tipo "cartas". Ahora a continuar el contenido principal que se pide en la etapa
+  4:
+
+Prompt: "Graciass, pero de momento prefiero ir a la etapa 4, en donde se pide lo siguiente:
+
+Mediante un panel lateral en las cartitas, se debe tener un sistema de marcar Pokémon favorito, 
+así como también poder desmarcarlo"
+
+Resultado: Copilot generó un sistema de agregado y quitado de una marca para añadir a Pokémon 
+favoritos en la página (aunque no se guardan, de momento).
+
+Utilidad: Sirve y es funcional, pero el botón quitar es totalmente invisible en sus contenido 
+interior porque tiene el mismo color las letras y el botón. Por lo que le pedí que cambie el color.
+
+Prompt: 
+"Graciaaas! está bueno, pero puedes cambiarle el color de las letras al botón "Quitar" una vez
+ agregas como favorito a un Pokémon. La letra debe ser oscura porque el botón es blanco pls."
+
+Funcionó, por fortuna. Además de eso, le agregué el cambio de fuente a las nuevas palabras agregadas,
+ para que haya cohesión en la fuente principal que se está usando.
+
+=== Etapa 5 ===
+
+Prompt: Gracias, siguiendo con la etapa 5, se necesita una función capaz de bloquear
+ y desbloquear las cartitas Pokémon.
+
+Resultado: Se editaron los archivos "App.jsx", "Pokelistado.jsx", "PokeCarta.jsx" y
+ "App.css", todos enlazados con tal de ejecutar la nueva función de poder bloquar y 
+ desbloquear.
+
+Utilidad: Ha funcionado sin problemas, no hay problemas con los colores. Aunque aún 
+no hay persistencia al recargar la página, pero eso se desarrollará en las siguientes etapas.
+He estado comprobando nuevamente, y puedes agregar a favoritos un Pokémon, luego bloquearlo,
+e igual queda como favorito en el panel derecho, lo cual es un poco extraño, pero lo dejaré así.
+
+=== Etapa 6 ===
+
+Prompt: 
+
+Resultado: 
+
+Utilidad: 
