@@ -1,14 +1,18 @@
 import './App.css'
+import PokeListado from './assets/components/PokeListado'
 
 function App() {
   return (
     <main className="app">
-      <section className="hero">
-        <p className="eyebrow">Primera etapa</p>
-        <h1>Pokémon</h1>
-        <p className="subtitle">
-          Bienvenido a la estructura inicial de tu proyecto web temático.
-        </p>
+      <section className="page">
+        <header className="page-header">
+          <p className="eyebrow">Etapa 2</p>
+          <h1>Pokédex inicial</h1>
+          <p className="subtitle">
+            Explora los primeros 151 Pokémon con su sprite y su tipo.
+          </p>
+        </header>
+        <PokeListado />
       </section>
     </main>
   )
