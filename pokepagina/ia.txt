@@ -133,8 +133,12 @@ sin problemas.
 
 === Etapa 7 ===
 
-Prompt: 
+Prompt: Graciaaas. Aquí viene uno complejo: Este va acerca del diseño responsivo y despliegue,
+ con tal de que la web pueda ajustarse dependiendo del tamaño de la pantalla.
 
-Resultado: 
+Resultado: Se editó el archivo "App.css" para poder ajustar el tamaño del contenido de
+ la página dependiendo de su tamaño, por ejemplo, si esta tiene un tamaño mediano, 
+ se muestran 3 cartas Pokémon.
 
-Utilidad: 
+Utilidad: Ha sido de utilidad por si se busca empequeñecer la página por si uno está 
+realizando otra tarea. Aunque no he comprobado cómo se ve la web desde un celular.
