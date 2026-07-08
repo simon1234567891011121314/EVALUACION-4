@@ -107,6 +107,9 @@ function App() {
           <p className="subtitle">
             Explora los primeros 151 Pokémon con su sprite y su tipo.
           </p>
+          <p className="nombremiosjkdka">
+            Simón Sepúlveda | Sección: 2026/O TI3031
+          </p>
         </header>
 
         <PokeFiltrado
